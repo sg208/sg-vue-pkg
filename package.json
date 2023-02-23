@@ -1,0 +1,26 @@
+{
+  "name": "sg208-button",
+  "version": "0.0.6-sg",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sg208-button.umd.js",
+  "module": "./dist/sg208-button.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/sg208-button.es.js",
+      "require": "./dist/sg208-button.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.0"
+  }
+}
