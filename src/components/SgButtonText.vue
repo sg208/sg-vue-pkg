@@ -1,5 +1,5 @@
 <template>
-  <button class="sg208-button">
+  <button class="sg208-button-2">
     {{ text }}
     <slot />
   </button>

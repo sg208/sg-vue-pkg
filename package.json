@@ -1,6 +1,6 @@
 {
   "name": "sg208-button",
-  "version": "0.0.8-sg",
+  "version": "0.0.11-sg",
   "description": "A simple Vue3 component library",
   "author": "github.com/sg208",
   "keywords": [
@@ -13,12 +13,13 @@
     "dist",
     "src"
   ],
-  "main": "./dist/sg208-button.umd.js",
-  "module": "./dist/sg208-button.es.js",
+  "type": "module",
+  "main": "./dist/sg208-button.umd.cjs",
+  "module": "./dist/sg208-button.js",
   "exports": {
     ".": {
-      "import": "./dist/sg208-button.es.js",
-      "require": "./dist/sg208-button.umd.js"
+      "import": "./dist/sg208-button.js",
+      "require": "./dist/sg208-button.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -32,7 +33,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "typescript": "^4.9.5",
     "vite": "^4.1.0",
+    "vite-plugin-dts": "^2.0.2",
     "vue": "^3.2.45"
   }
 }
