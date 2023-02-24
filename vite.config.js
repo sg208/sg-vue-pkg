@@ -13,11 +13,9 @@ export default defineConfig({
     rollupOptions: {
       external: ["vue"],
       output: {
-        format: "es",
         globals: {
           vue: "Vue",
         },
-        entryFileNames: "sg208-button.[format].js",
       },
     },
   },
