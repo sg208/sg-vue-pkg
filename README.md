@@ -1,6 +1,6 @@
-# SG208Button NPM Package
+# sg208-button
 
-This is a simple a Vue 3 component plugin, nothing really fancy. It inspired by [Publish a Vue Component to NPM // Vite and Vue 3](https://www.youtube.com/watch?v=5QV9wVc8c7g) (YouTube) with updated Vite config based on latest Vite.
+This is a simple Vue 3 components library with only two components available at this time, `SgButton` and `SgButtonText`.
 
 ## Installation
 
@@ -8,30 +8,21 @@ This is a simple a Vue 3 component plugin, nothing really fancy. It inspired by 
 npm i sg208-button
 ```
 
-## Add the plugin to your Vue 3 project
-
-Add the following to main.js of your project or wherever applied.
-
-```
-// Import the plugin + style
-import Sg208Button from "sg208-button";
-import "sg208-button/dist/style.css";
-
-// Mini mod to allow multiple plugins
-const app = createApp(App);
-const plugins = [Sg208Button]
-
-plugins.forEach((plugin) => app.use(plugin));
-
-app.mount("#app");
-```
-
 ## Use it in Vue3 component
 
 ```
+<script setup>
+// import the style here or place it somewhere more global if desired
+import "sg208-button/dist/style.css";
+
+// import your component(s) here
+import { SgButton, SgButtonText } from "sg208-button"
+</script>
+
 <template>
-    ...existing stuff here...
-    <sg208-button>Button Text Here</sg208-button>
+    <SgButton>Button Text Here</SgButton>
+    <SgButtonText text="Button text with prop" />
+    <SgButtonText>This is SgButtonText</SgButtonText>
 </template>
 ```
 
