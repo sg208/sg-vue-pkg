@@ -1,6 +1,6 @@
 # sg208-button
 
-This is a simple Vue 3 components library with only two components available at this time, `SgButton` and `SgButtonText`.
+This is a small NPM package for a simple Vue 3 components library with only two components available at this time, `SgButton` and `SgButtonText`.
 
 ## Installation
 
@@ -12,17 +12,19 @@ npm i sg208-button
 
 ```
 <script setup>
-// import the style here or place it somewhere more global if desired
-import "sg208-button/dist/style.css";
+// import the style at the app level
+import "sg208-button/style.css";
 
-// import your component(s) here
+// import sg208-button component(s) here
 import { SgButton, SgButtonText } from "sg208-button"
 </script>
 
 <template>
     <SgButton>Button Text Here</SgButton>
+    <SgButton ariaLabel="Your label here"><SomeIconHere /></SgButton>
     <SgButtonText text="Button text with prop" />
     <SgButtonText>This is SgButtonText</SgButtonText>
+    <SgButtonText ariaLabel="Your label here"><SomeIconHere /></SgButtonText>
 </template>
 ```
 

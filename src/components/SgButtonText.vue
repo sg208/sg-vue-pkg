@@ -1,25 +1,29 @@
 <template>
-  <button class="sg208-button-2">
+  <button :class="sgButtonTextStyle" :aria-label="ariaLabel">
     {{ text }}
     <slot />
   </button>
 </template>
 
 <script setup lang="ts">
-defineProps({
-  text: {
-    type: String,
-    default: "",
-  },
-});
-</script>
+import { css } from "vite-css-in-js";
 
-<style scoped>
-.sg208-button-2 {
+const sgButtonTextStyle = css`
   background-color: #cccccc;
   color: black;
   padding: 1rem;
   border-radius: 0.25rem;
   font-weight: bold;
-}
-</style>
+`;
+
+defineProps({
+  text: {
+    type: String,
+    default: "",
+  },
+  ariaLabel: {
+    type: String,
+    default: null,
+  },
+});
+</script>
