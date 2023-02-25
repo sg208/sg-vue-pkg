@@ -1,6 +1,6 @@
 {
   "name": "sg208-button",
-  "version": "0.0.12-sg",
+  "version": "0.0.13-sg",
   "description": "A simple Vue3 component library of buttons",
   "author": "github.com/sg208",
   "keywords": [
@@ -14,27 +14,34 @@
   "files": [
     "dist"
   ],
-  "type": "module",
-  "main": "./dist/sg208-button.umd.cjs",
-  "module": "./dist/sg208-button.js",
+  "type": "commonjs",
+  "main": "./dist/sg208-button.umd.js",
+  "module": "./dist/sg208-button.mjs",
   "exports": {
     ".": {
-      "import": "./dist/sg208-button.js",
-      "require": "./dist/sg208-button.umd.cjs"
+      "import": "./dist/sg208-button.mjs",
+      "require": "./dist/sg208-button.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src && npm run format",
+    "format": "prettier .  --write"
   },
   "peerDependencies": {
     "vue": "^3.2.45"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "prettier": "2.8.4",
     "typescript": "^4.9.5",
     "vite": "^4.1.0",
     "vite-plugin-dts": "^2.0.2",
+    "vite-plugin-eslint": "^1.8.1",
     "vue": "^3.2.45"
   }
 }
