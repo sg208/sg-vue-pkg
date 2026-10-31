@@ -13,6 +13,7 @@
 
 ## Key decisions
 
-- Vue is a peer dependency and external in the bundle. WHY: consumers bring their own Vue 3. SOURCE: `vite.config.js` `rollupOptions.external`.
+- Vue is a peer dependency and external in the bundle. WHY: consumers bring their own Vue 3. SOURCE: `vite.config.mts` `rollupOptions.external`.
 - Styles via `vite-css-in-js` `css` tagged template → class names, extracted to `dist/style.css`. WHY: keep styles beside the component without SFC `<style>`. SOURCE: `src/components/SgButton.vue`.
-- Type declarations emitted by `vite-plugin-dts`. WHY: TS consumers get prop types. SOURCE: `vite.config.js`.
+- Type declarations emitted by `vite-plugin-dts`. WHY: TS consumers get prop types. SOURCE: `vite.config.mts`.
+- Tests colocated as `src/**/*.test.ts` with Vitest + happy-dom. WHY: same Vite pipeline as the build, so `vite-css-in-js` transforms apply. SOURCE: `vite.config.mts` `test`.
