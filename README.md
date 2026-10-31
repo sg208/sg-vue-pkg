@@ -5,7 +5,8 @@ This is a small NPM package for a simple Vue 3 components library with only two 
 ## Installation
 
 ```
-npm i sg208-button
+pnpm add sg208-button
+# or: npm i sg208-button
 ```
 
 ## Use it in Vue3 component
