@@ -2,7 +2,8 @@
   "name": "sg208-button",
   "version": "0.0.18-sg",
   "description": "A simple Vue3 component library of buttons",
-  "author": "github.com/sg208",
+  "author": "Syailendra Ginting (https://github.com/sg208)",
+  "license": "MIT",
   "packageManager": "pnpm@10.34.8",
   "keywords": [
     "vue",
@@ -13,7 +14,8 @@
     "components"
   ],
   "files": [
-    "dist"
+    "dist",
+    "LICENSE"
   ],
   "type": "commonjs",
   "main": "./dist/sg208-button.umd.js",

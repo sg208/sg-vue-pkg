@@ -29,6 +29,21 @@ import { SgButton, SgButtonText } from "sg208-button"
 </template>
 ```
 
+## Development
+
+Requires Node 24 (`.node-version`) and pnpm (version pinned in `package.json` `packageManager`).
+
+```
+pnpm install
+pnpm test        # Vitest component tests
+pnpm verify      # format check, lint, typecheck, tests, build
+pnpm build       # library build to dist/
+```
+
 ## Thank you
 
 Thank you for visiting and checking out this package, hope it works out for you. I may update this in the near future.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
