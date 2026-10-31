@@ -1,6 +1,6 @@
 {
   "name": "sg208-button",
-  "version": "0.0.18-sg",
+  "version": "0.1.0",
   "description": "A simple Vue3 component library of buttons",
   "author": "Syailendra Ginting (https://github.com/sg208)",
   "license": "MIT",
