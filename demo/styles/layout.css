@@ -1,0 +1,148 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: var(--page-inverse-bg);
+  color: var(--page-inverse-ink);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+main:focus {
+  outline: none;
+}
+
+.noscript {
+  padding: var(--gutter);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Header: wordmark, section links, theme switch. No bar chrome. */
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding-block: 1.25rem;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.wordmark__version {
+  color: var(--page-muted);
+  font-size: var(--step-small);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.site-nav {
+  order: 3;
+  flex-basis: 100%;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding-block: 0.5rem;
+  color: var(--page-muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--page-ink);
+}
+
+.theme-switch {
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 0.25rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--page-surface);
+}
+
+.theme-switch__option {
+  position: relative;
+}
+
+.theme-switch__option input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.theme-switch__option span {
+  display: block;
+  padding: 0.5rem 0.625rem;
+  border-radius: calc(var(--radius) - 1px);
+  font-size: var(--step-small);
+  font-weight: 500;
+  color: var(--page-muted);
+}
+
+.theme-switch__option input:checked + span {
+  background: var(--page-ink);
+  color: var(--page-bg);
+}
+
+.theme-switch__option input:focus-visible + span {
+  outline: 2px solid var(--page-ink);
+  outline-offset: 2px;
+}
+
+@media (min-width: 60rem) {
+  .site-nav {
+    order: 0;
+    flex-basis: auto;
+    margin-left: auto;
+  }
+
+  .theme-switch {
+    margin-left: 0;
+  }
+}

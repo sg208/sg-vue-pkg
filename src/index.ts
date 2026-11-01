@@ -1,3 +1,4 @@
+import "./styles/tokens.css";
 import SgButton from "./components/SgButton.vue";
 import SgButtonText from "./components/SgButtonText.vue";
 

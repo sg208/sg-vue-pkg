@@ -1,0 +1,72 @@
+/*
+ * Design tokens for sg208-button.
+ * Every value is a CSS custom property, so consumers can override any of them
+ * on :root, on a wrapper, or on a single button. `:where()` keeps specificity
+ * at zero, so a plain `:root { --sg-button-bg: … }` always wins.
+ */
+:where(:root) {
+  --sg-button-font-family: inherit;
+  --sg-button-font-size: 0.9375rem;
+  --sg-button-font-weight: 600;
+  --sg-button-line-height: 1.25;
+  --sg-button-letter-spacing: -0.005em;
+  --sg-button-min-height: 2.75rem;
+  --sg-button-padding-block: 0.625rem;
+  --sg-button-padding-inline: 1.125rem;
+  --sg-button-gap: 0.5rem;
+  --sg-button-radius: 0.25rem;
+  --sg-button-border-width: 1px;
+  --sg-button-focus-ring: #2b2622;
+  --sg-button-focus-ring-width: 2px;
+  --sg-button-focus-ring-offset: 2px;
+  --sg-button-disabled-opacity: 0.5;
+  --sg-button-transition-duration: 160ms;
+  --sg-button-press-offset: 1px;
+
+  /* SgButton: the primary action */
+  --sg-button-bg: #a8201a;
+  --sg-button-bg-hover: #8f1a15;
+  --sg-button-bg-active: #761511;
+  --sg-button-fg: #ffffff;
+  --sg-button-border: transparent;
+
+  /* SgButtonText: the quiet, secondary action */
+  --sg-button-text-bg: #e6dfdc;
+  --sg-button-text-bg-hover: #dbd2ce;
+  --sg-button-text-bg-active: #cfc5c1;
+  --sg-button-text-fg: #2b2622;
+  --sg-button-text-border: transparent;
+}
+
+:where([data-sg-theme="dark"]) {
+  --sg-button-focus-ring: #ece5e2;
+  --sg-button-bg: #ffb4a9;
+  --sg-button-bg-hover: #ffc9c1;
+  --sg-button-bg-active: #ff9d8f;
+  --sg-button-fg: #3b0d08;
+  --sg-button-text-bg: #36302d;
+  --sg-button-text-bg-hover: #423b38;
+  --sg-button-text-bg-active: #4d4542;
+  --sg-button-text-fg: #ece5e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :where([data-sg-theme="auto"]) {
+    --sg-button-focus-ring: #ece5e2;
+    --sg-button-bg: #ffb4a9;
+    --sg-button-bg-hover: #ffc9c1;
+    --sg-button-bg-active: #ff9d8f;
+    --sg-button-fg: #3b0d08;
+    --sg-button-text-bg: #36302d;
+    --sg-button-text-bg-hover: #423b38;
+    --sg-button-text-bg-active: #4d4542;
+    --sg-button-text-fg: #ece5e2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(:root) {
+    --sg-button-transition-duration: 0ms;
+    --sg-button-press-offset: 0px;
+  }
+}
