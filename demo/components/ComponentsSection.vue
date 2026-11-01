@@ -9,7 +9,12 @@
       <p class="section-lead">
         Import the stylesheet once, then the components wherever you need them.
       </p>
-      <pre class="components__setup"><code>{{ setupCode }}</code></pre>
+      <pre
+        class="components__setup"
+        role="region"
+        aria-label="Setup code"
+        tabindex="0"
+      ><code>{{ setupCode }}</code></pre>
 
       <article
         v-for="doc in componentDocs"
@@ -21,7 +26,7 @@
         <div class="component-doc__intro">
           <h3 :id="`${doc.id}-title`">{{ doc.name }}</h3>
           <p>{{ doc.summary }}</p>
-          <div class="component-doc__examples" data-ui>
+          <div class="component-doc__examples">
             <template v-if="doc.name === 'SgButton'">
               <SgButton>Save changes</SgButton>
               <SgButton aria-label="Add item">
@@ -37,7 +42,11 @@
           </div>
         </div>
         <div class="component-doc__api">
-          <pre><code>{{ doc.usage }}</code></pre>
+          <pre
+            role="region"
+            :aria-label="`${doc.name} usage`"
+            tabindex="0"
+          ><code>{{ doc.usage }}</code></pre>
           <ApiTable
             :caption="`${doc.name} API`"
             :rows="[...doc.props, ...sharedApi]"

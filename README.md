@@ -111,8 +111,8 @@ Dark values apply under `data-sg-theme="dark"` on any ancestor. Use `data-sg-the
 | `--sg-button-focus-ring-width`    | `2px`                  | Focus outline thickness                               |
 | `--sg-button-focus-ring-offset`   | `2px`                  | Gap between button and focus outline                  |
 | `--sg-button-disabled-opacity`    | `0.5`                  | Opacity when `disabled` or `aria-disabled="true"`     |
-| `--sg-button-transition-duration` | `160ms`                | Hover and press transition (0ms under reduced motion) |
-| `--sg-button-press-offset`        | `1px`                  | Press movement (0px under reduced motion)             |
+| `--sg-button-transition-duration` | `160ms`                | Hover and press transition (off under reduced motion) |
+| `--sg-button-press-offset`        | `1px`                  | Press movement (off under reduced motion)             |
 
 ### Restoring the 0.1.0 look
 
@@ -123,6 +123,7 @@ Props, events and slots are unchanged; only the default styling changed. These o
   --sg-button-bg: #cc0000;
   --sg-button-bg-hover: #cc0000;
   --sg-button-bg-active: #cc0000;
+  --sg-button-fg: #ffffff;
   --sg-button-text-bg: #cccccc;
   --sg-button-text-bg-hover: #cccccc;
   --sg-button-text-bg-active: #cccccc;

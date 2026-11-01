@@ -23,7 +23,7 @@
       </div>
 
       <figure class="hero__demo">
-        <div class="confirm" data-ui>
+        <div class="confirm">
           <p class="confirm__title">Discard this draft?</p>
           <p class="confirm__body">
             Your changes to “Spring menu” have not been saved. Discarding them

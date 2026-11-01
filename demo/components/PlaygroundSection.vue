@@ -7,7 +7,7 @@
     <div class="wrap">
       <h2 id="playground-title" class="section-title">Try your own label</h2>
 
-      <div class="label-field" data-ui>
+      <div class="label-field">
         <label for="label-input" class="label-field__label">Button label</label>
         <input
           id="label-input"
@@ -30,7 +30,7 @@
       </div>
 
       <div class="playground__grid">
-        <div class="stage" :style="stageStyle" data-ui>
+        <div class="stage" :style="stageStyle">
           <SgButton>{{ shownLabel }}</SgButton>
           <SgButtonText :text="shownLabel" />
           <SgButton :aria-label="shownLabel"><PlusIcon /></SgButton>
@@ -48,7 +48,11 @@
           <h3 id="snippet-title">Your overrides</h3>
           <SgButtonText text="Copy CSS" @click="handleCopy" />
         </div>
-        <pre aria-labelledby="snippet-title"><code>{{ snippet }}</code></pre>
+        <pre
+          role="region"
+          aria-labelledby="snippet-title"
+          tabindex="0"
+        ><code>{{ snippet }}</code></pre>
         <p class="snippet__status" role="status">{{ copyStatus }}</p>
       </div>
     </div>

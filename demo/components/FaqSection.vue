@@ -16,7 +16,12 @@
           </summary>
           <div class="faq__answer">
             <p>{{ item.answer }}</p>
-            <pre v-if="item.code"><code>{{ item.code }}</code></pre>
+            <pre
+              v-if="item.code"
+              role="region"
+              aria-label="Code example"
+              tabindex="0"
+            ><code>{{ item.code }}</code></pre>
           </div>
         </details>
       </div>

@@ -49,6 +49,14 @@ const sgButtonStyle = css`
     transform: translateY(var(--sg-button-press-offset));
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:active {
+      transform: none;
+    }
+  }
+
   &:focus-visible {
     outline: var(--sg-button-focus-ring-width) solid var(--sg-button-focus-ring);
     outline-offset: var(--sg-button-focus-ring-offset);

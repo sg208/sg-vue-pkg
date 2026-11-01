@@ -34,11 +34,11 @@ export const faqItems: FaqItem[] = [
     question: "The default look changed. How do I get the old one back?",
     answer:
       "No props, events or slots changed, only the default styling. These overrides bring back the original colours, padding and weight.",
-    code: ":root {\n  --sg-button-bg: #cc0000;\n  --sg-button-bg-hover: #cc0000;\n  --sg-button-bg-active: #cc0000;\n  --sg-button-text-bg: #cccccc;\n  --sg-button-text-bg-hover: #cccccc;\n  --sg-button-text-bg-active: #cccccc;\n  --sg-button-text-fg: #000000;\n  --sg-button-padding-block: 1rem;\n  --sg-button-padding-inline: 1rem;\n  --sg-button-font-weight: 700;\n}",
+    code: ":root {\n  --sg-button-bg: #cc0000;\n  --sg-button-bg-hover: #cc0000;\n  --sg-button-bg-active: #cc0000;\n  --sg-button-fg: #ffffff;\n  --sg-button-text-bg: #cccccc;\n  --sg-button-text-bg-hover: #cccccc;\n  --sg-button-text-bg-active: #cccccc;\n  --sg-button-text-fg: #000000;\n  --sg-button-padding-block: 1rem;\n  --sg-button-padding-inline: 1rem;\n  --sg-button-font-weight: 700;\n}",
   },
   {
     question: "Do the buttons respect reduced motion?",
     answer:
-      "Yes. When the system asks for reduced motion, the hover transition and the press movement are switched off through the tokens.",
+      "Yes. When the system asks for reduced motion, the hover transition and the press movement are switched off, even if you override the motion tokens.",
   },
 ];

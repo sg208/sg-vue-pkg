@@ -1,4 +1,4 @@
-import { onBeforeUnmount, ref } from "vue";
+import { nextTick, onBeforeUnmount, ref } from "vue";
 
 // Copies text and exposes a short status message for an aria-live region.
 export const useCopy = () => {
@@ -6,6 +6,9 @@ export const useCopy = () => {
   const resetTimer = ref<number>();
 
   const copyText = async (text: string, label: string) => {
+    // Clear first so a repeated identical message is announced again.
+    copyStatus.value = "";
+    await nextTick();
     try {
       await navigator.clipboard.writeText(text);
       copyStatus.value = `${label} copied to the clipboard.`;
