@@ -1,0 +1,176 @@
+/* Page tokens: the showcase's own palette. Button tokens live in src/. */
+:root {
+  --page-bg: #ebe5e3;
+  --page-surface: #e1dad7;
+  --page-surface-strong: #d6cdc9;
+  --page-raised: #f7f4f2;
+  --page-ink: #2b2622;
+  --page-muted: #5e5551;
+  --page-accent: #a8201a;
+  --page-accent-ink: #ffffff;
+  --page-inverse-bg: #2b2622;
+  --page-inverse-ink: #ece5e2;
+  --page-control-edge: #5e5551;
+
+  --font-text: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-code: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --step-small: 0.875rem;
+  --step-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(1.875rem, 1.3rem + 2.4vw, 3.25rem);
+  --step-display: clamp(2.25rem, 1.4rem + 3.8vw, 4.75rem);
+
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --content-max: 76rem;
+  --section-space: clamp(4.5rem, 10vw, 9rem);
+  --radius: 0.25rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --page-bg: #1c1917;
+  --page-surface: #262220;
+  --page-surface-strong: #322c29;
+  --page-raised: #2a2624;
+  --page-ink: #ece5e2;
+  --page-muted: #a89f9b;
+  --page-accent: #ffb4a9;
+  --page-accent-ink: #3b0d08;
+  --page-inverse-bg: #ece5e2;
+  --page-inverse-ink: #1c1917;
+  --page-control-edge: #a89f9b;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page-bg: #1c1917;
+    --page-surface: #262220;
+    --page-surface-strong: #322c29;
+    --page-raised: #2a2624;
+    --page-ink: #ece5e2;
+    --page-muted: #a89f9b;
+    --page-accent: #ffb4a9;
+    --page-accent-ink: #3b0d08;
+    --page-inverse-bg: #ece5e2;
+    --page-inverse-ink: #1c1917;
+    --page-control-edge: #a89f9b;
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--page-ink);
+  font-family: var(--font-text);
+  font-size: var(--step-body);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+h3 {
+  font-size: var(--step-lead);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--page-ink);
+  outline-offset: 3px;
+}
+
+code,
+pre {
+  font-family: var(--font-code);
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius);
+  background: var(--page-surface);
+}
+
+pre {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  background: var(--page-surface);
+  line-height: 1.6;
+  tab-size: 2;
+}
+
+::selection {
+  background: var(--page-accent);
+  color: var(--page-accent-ink);
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section-title {
+  font-size: var(--step-head);
+}
+
+.section-lead {
+  max-width: 40rem;
+  margin-top: 1.25rem;
+  font-size: var(--step-lead);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.muted {
+  color: var(--page-muted);
+}

@@ -1,0 +1,180 @@
+/* Playground: the label you type becomes the buttons below. */
+.label-field {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.label-field__label {
+  display: block;
+  color: var(--page-muted);
+  font-size: var(--step-small);
+  font-weight: 500;
+}
+
+.label-field__input {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.1em 0 0.15em;
+  border: 0;
+  border-bottom: 2px solid var(--page-control-edge);
+  border-radius: 0;
+  background: transparent;
+  color: var(--page-ink);
+  caret-color: var(--page-accent);
+  font: inherit;
+  font-size: clamp(2.25rem, 1.2rem + 5vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+}
+
+.label-field__input:focus-visible {
+  outline: none;
+  border-bottom-color: var(--page-ink);
+  border-bottom-width: 4px;
+  margin-bottom: -2px;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.playground__grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 12rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border-radius: 0.5rem;
+  background: var(--page-raised);
+}
+
+.stage > * {
+  max-width: 100%;
+}
+
+.controls {
+  display: grid;
+  gap: 1.5rem;
+  align-content: start;
+}
+
+.choice {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.choice__legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: var(--step-small);
+  font-weight: 500;
+  color: var(--page-muted);
+}
+
+.choice__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.choice__option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.375rem 0.875rem 0.375rem 0.5rem;
+  border-radius: var(--radius);
+  background: var(--page-surface);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 160ms ease-out;
+}
+
+.choice__option:hover {
+  background: var(--page-surface-strong);
+}
+
+.choice__option input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.choice__option:has(input:checked) {
+  background: var(--page-ink);
+  color: var(--page-bg);
+}
+
+.choice__option:has(input:focus-visible) {
+  outline: 2px solid var(--page-ink);
+  outline-offset: 2px;
+}
+
+.choice__swatch {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--swatch);
+  outline: 2px solid rgb(255 255 255 / 0.5);
+  outline-offset: -2px;
+}
+
+:root[data-theme="dark"] .choice__swatch {
+  background: var(--swatch-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .choice__swatch {
+    background: var(--swatch-dark);
+  }
+}
+
+.choice__corner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-top: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+  border-top-left-radius: min(var(--corner), 0.875rem);
+}
+
+.snippet {
+  margin-top: 1.5rem;
+}
+
+.snippet__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 60rem) {
+  .playground__grid {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  .stage {
+    min-height: 16rem;
+  }
+}

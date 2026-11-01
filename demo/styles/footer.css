@@ -1,0 +1,106 @@
+/* Footer: a board of filled tiles. */
+.site-footer {
+  padding-block: var(--section-space) var(--gutter);
+}
+
+.footer-board {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.footer-tile {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 9rem;
+  margin: 0;
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  background: var(--page-surface);
+}
+
+.footer-tile__lead {
+  max-width: 22ch;
+  font-size: var(--step-lead);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.footer-tile__small {
+  color: var(--page-muted);
+  font-size: var(--step-small);
+}
+
+.footer-tile ul {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-tile ul a {
+  display: inline-block;
+  padding-block: 0.25rem;
+}
+
+.footer-tile--wordmark {
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  background: var(--page-inverse-bg);
+  color: var(--page-inverse-ink);
+  font-size: clamp(2.5rem, 7vw, 6.5rem);
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.footer-tile--accent {
+  background: var(--page-accent);
+  color: var(--page-accent-ink);
+  font-size: var(--step-lead);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: transform 200ms var(--ease-out);
+}
+
+.footer-tile--accent svg {
+  align-self: flex-end;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: transform 200ms var(--ease-out);
+}
+
+.footer-tile--accent:hover svg {
+  transform: translate(0.25rem, -0.25rem);
+}
+
+.footer-tile--accent:focus-visible {
+  outline-offset: 4px;
+}
+
+@media (min-width: 48rem) {
+  .footer-tile--statement {
+    grid-column: span 6;
+    min-height: 13.75rem;
+  }
+  .footer-tile--nav,
+  .footer-tile--install {
+    grid-column: span 3;
+    min-height: 13.75rem;
+  }
+  .footer-tile--wordmark {
+    grid-column: span 8;
+    min-height: 20rem;
+  }
+  .footer-tile--accent {
+    grid-column: span 4;
+  }
+}
