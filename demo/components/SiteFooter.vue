@@ -12,7 +12,7 @@
           >.
         </p>
       </div>
-      <nav class="footer-tile footer-tile--nav" aria-label="Package links">
+      <nav class="footer-tile footer-tile--nav" aria-label="Footer links">
         <ul>
           <li>
             <a href="https://github.com/sg208/sg-vue-pkg" rel="noopener"
@@ -31,6 +31,9 @@
               >Licence</a
             >
           </li>
+          <li v-for="page in legalPages" :key="page.href">
+            <a :href="page.href">{{ page.title }}</a>
+          </li>
         </ul>
       </nav>
       <div class="footer-tile footer-tile--install">
@@ -40,7 +43,10 @@
       <p class="footer-tile footer-tile--wordmark" aria-hidden="true">
         sg208-button
       </p>
-      <a class="footer-tile footer-tile--accent" href="#playground">
+      <a
+        class="footer-tile footer-tile--accent"
+        :href="`${homeHref}#playground`"
+      >
         <span>Back to the playground</span>
         <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
           <path
@@ -54,3 +60,10 @@
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+import { legalPages } from "../data/legalPages";
+
+// Empty on the home page; "./" on other pages so the playground link goes home.
+const { homeHref = "" } = defineProps<{ homeHref?: string }>();
+</script>
