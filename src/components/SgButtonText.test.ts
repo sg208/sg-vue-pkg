@@ -25,4 +25,18 @@ describe("SgButtonText", () => {
 
     expect(wrapper.attributes("aria-label")).toBe("Open menu");
   });
+
+  it("exposes a stable class for consumer styling", () => {
+    const wrapper = mount(SgButtonText);
+
+    expect(wrapper.classes()).toContain("sg-button-text");
+  });
+
+  it("emits native click events to the parent", async () => {
+    const wrapper = mount(SgButtonText, { props: { text: "Go" } });
+
+    await wrapper.trigger("click");
+
+    expect(wrapper.emitted("click")).toHaveLength(1);
+  });
 });
