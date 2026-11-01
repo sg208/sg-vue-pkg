@@ -153,7 +153,7 @@ The library code is in `src/`. The showcase in `demo/` imports straight from `sr
 
 ### Deploying the showcase
 
-The showcase runs on a Cloudflare Worker that serves `dist-demo/` as static assets; the config is in `wrangler.jsonc`. To deploy, install `wrangler` v4 globally, set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, then run:
+The showcase runs on a Cloudflare Worker that serves `dist-demo/` as static assets; the config is in `wrangler.jsonc`. To deploy, set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` (wrangler 4 is a dev dependency), then run:
 
 ```sh
 pnpm run deploy   # builds the showcase, then runs wrangler deploy
