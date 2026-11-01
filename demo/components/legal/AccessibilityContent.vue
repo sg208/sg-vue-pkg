@@ -31,7 +31,7 @@
     <li>
       The page follows your system's light or dark setting, or you can pick one.
     </li>
-    <li>The layout works on screens as narrow as 360 pixels.</li>
+    <li>The layout works on screens as narrow as 320 pixels.</li>
   </ul>
 
   <h2>What the buttons do</h2>
@@ -48,8 +48,8 @@
   <h2>Known problems</h2>
   <ul>
     <li>
-      The showcase needs JavaScript. Without it you only see a link to the
-      repository.
+      The showcase needs JavaScript. Without it you only see a short note that
+      gives the address of the repository on GitHub.
     </li>
     <li>
       On screens narrower than 40rem the token tables are restyled as blocks.
