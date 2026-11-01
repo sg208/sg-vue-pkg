@@ -26,11 +26,6 @@
       request logs such as your IP address, user agent and the pages you
       request.
     </li>
-    <li>
-      <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code> and
-      <code>fonts.gstatic.com</code>) supplies the Hanken Grotesk typeface.
-      Loading it sends your IP address and user agent to Google.
-    </li>
   </ul>
   <p>
     The links to GitHub and npm only contact those sites when you follow them.
