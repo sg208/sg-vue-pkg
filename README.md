@@ -2,6 +2,8 @@
 
 A small Vue 3 component library with two accessible buttons: `SgButton` for the primary action and `SgButtonText` for quieter, secondary actions. Both render a single native `<button>` and are themed entirely with CSS custom properties.
 
+The showcase and docs page is live at https://sg-vue-pkg.engg.app, served by a Cloudflare Worker (static assets) on the sg208 account. `pnpm build:demo` builds it into `dist-demo/`, and `pnpm deploy` builds and runs `wrangler deploy` using `wrangler.jsonc`; it needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in the environment.
+
 ## Installation
 
 ```sh

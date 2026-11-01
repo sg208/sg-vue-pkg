@@ -25,3 +25,6 @@ dist-demo
 *.sln
 *.sw?
 coverage
+
+# wrangler
+.wrangler/
