@@ -40,7 +40,8 @@
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "test": "vitest run",
-    "verify": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build && pnpm run build:demo"
+    "verify": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build && pnpm run build:demo",
+    "deploy": "pnpm build:demo && wrangler deploy"
   },
   "peerDependencies": {
     "vue": "^3.2.45"
