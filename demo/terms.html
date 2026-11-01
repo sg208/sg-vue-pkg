@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-sg-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Terms for using the sg208-button showcase and its code."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Terms · sg208-button</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Apply a saved theme before first paint so the page never flashes.
+      try {
+        const savedTheme = localStorage.getItem("sg208-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+          document.documentElement.dataset.sgTheme = savedTheme;
+        }
+      } catch {
+        // Storage can be unavailable (private mode); the system theme applies.
+      }
+    </script>
+  </head>
+  <body data-page="terms">
+    <div id="app"></div>
+    <noscript>
+      <p class="noscript">
+        This page needs JavaScript. Its text is in demo/components/legal/ in the
+        repository on GitHub: https://github.com/sg208/sg-vue-pkg
+      </p>
+    </noscript>
+    <script type="module" src="./legal.ts"></script>
+  </body>
+</html>

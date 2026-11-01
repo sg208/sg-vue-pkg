@@ -1,6 +1,8 @@
 # sg208-button
 
-A small Vue 3 component library with two accessible buttons: `SgButton` for the primary action and `SgButtonText` for quieter, secondary actions. Both render a single native `<button>` and are themed entirely with CSS custom properties.
+Two accessible buttons for Vue 3: `SgButton` for the main action on a screen and `SgButtonText` for the quieter ones. Each renders one native `<button>`, and every colour, size and duration is a CSS custom property you can override.
+
+Try them in the live showcase: **https://sg-vue-pkg.engg.app**
 
 ## Installation
 
@@ -136,7 +138,7 @@ Props, events and slots are unchanged; only the default styling changed. These o
 
 ## Development
 
-Requires Node 24 (`.node-version`) and pnpm (version pinned in `package.json` `packageManager`).
+You need Node 24 (see `.node-version`) and pnpm (the version is pinned in `package.json` under `packageManager`).
 
 ```sh
 pnpm install
@@ -147,9 +149,17 @@ pnpm build:demo   # static showcase build to dist-demo/
 pnpm verify       # format check, lint, typecheck, tests, library and demo builds
 ```
 
-## Thank you
+The library code is in `src/`. The showcase in `demo/` imports straight from `src/`, so it always shows the current code. It also holds the site's accessibility, privacy and terms pages.
 
-Thank you for visiting and checking out this package, hope it works out for you. I may update this in the near future.
+### Deploying the showcase
+
+The showcase runs on a Cloudflare Worker that serves `dist-demo/` as static assets; the config is in `wrangler.jsonc`. To deploy, set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` (wrangler 4 is a dev dependency), then run:
+
+```sh
+pnpm run deploy   # builds the showcase, then runs wrangler deploy
+```
+
+Publishing the package to npm is a separate, manual step.
 
 ## License
 

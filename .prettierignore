@@ -1,7 +1,6 @@
 dist
 pnpm-lock.yaml
 coverage
-.backlog
 .in-progress
 .in-review
 .done
