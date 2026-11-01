@@ -1,0 +1,138 @@
+/* Hero */
+.hero {
+  padding-block: clamp(2.5rem, 8vw, 7rem) clamp(3rem, 6vw, 5rem);
+}
+
+.hero__grid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.hero h1 {
+  max-width: 13ch;
+  font-size: var(--step-display);
+}
+
+.hero__lede {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  font-size: var(--step-lead);
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.hero__lede strong {
+  font-weight: 600;
+}
+
+.install {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.install__command {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.9375rem;
+}
+
+.hero__status,
+.confirm__status,
+.snippet__status {
+  min-height: 1.5em;
+  margin-top: 0.5rem;
+  color: var(--page-muted);
+  font-size: var(--step-small);
+}
+
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.hero__demo {
+  margin: 0;
+}
+
+.confirm {
+  max-width: 30rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 0.5rem;
+  background: var(--page-raised);
+}
+
+.confirm__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.confirm__body {
+  margin-top: 0.5rem;
+  color: var(--page-muted);
+  font-size: 0.9375rem;
+}
+
+.confirm__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.hero__demo figcaption {
+  max-width: 30rem;
+  margin-top: 1rem;
+  font-size: var(--step-small);
+}
+
+@media (min-width: 60rem) {
+  .hero__grid {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+/* Intro: a lead paragraph over four run-in columns */
+.intro {
+  background: var(--page-surface);
+}
+
+.intro__lead {
+  max-width: 52rem;
+  margin-top: 1.5rem;
+  font-size: var(--step-lead);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.intro__columns {
+  display: grid;
+  gap: 2rem 1.5rem;
+  margin-top: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.intro__columns strong {
+  color: var(--page-ink);
+  font-weight: 600;
+}
+
+@media (min-width: 40rem) {
+  .intro__columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .intro__columns {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

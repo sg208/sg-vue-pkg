@@ -20,8 +20,10 @@
   "type": "commonjs",
   "main": "./dist/sg208-button.umd.js",
   "module": "./dist/sg208-button.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/sg208-button.mjs",
       "require": "./dist/sg208-button.umd.js"
     },
@@ -29,13 +31,16 @@
   },
   "scripts": {
     "build": "vite build",
+    "dev": "vite --config vite.demo.config.mts",
+    "build:demo": "vite build --config vite.demo.config.mts",
+    "preview:demo": "vite preview --config vite.demo.config.mts",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "test": "vitest run",
-    "verify": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
+    "verify": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build && pnpm run build:demo"
   },
   "peerDependencies": {
     "vue": "^3.2.45"

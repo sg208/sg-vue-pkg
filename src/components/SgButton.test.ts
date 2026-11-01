@@ -24,6 +24,21 @@ describe("SgButton", () => {
     expect(wrapper.classes().length).toBeGreaterThan(0);
   });
 
+  it("exposes a stable class for consumer styling", () => {
+    const wrapper = mount(SgButton);
+
+    expect(wrapper.classes()).toContain("sg-button");
+  });
+
+  it("passes native attributes such as type and disabled through", () => {
+    const wrapper = mount(SgButton, {
+      attrs: { type: "submit", disabled: true },
+    });
+
+    expect(wrapper.attributes("type")).toBe("submit");
+    expect(wrapper.attributes("disabled")).toBeDefined();
+  });
+
   it("emits native click events to the parent", async () => {
     const wrapper = mount(SgButton);
 
