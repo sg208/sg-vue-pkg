@@ -20,8 +20,10 @@
   "type": "commonjs",
   "main": "./dist/sg208-button.umd.js",
   "module": "./dist/sg208-button.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/sg208-button.mjs",
       "require": "./dist/sg208-button.umd.js"
     },
