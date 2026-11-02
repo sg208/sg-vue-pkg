@@ -28,3 +28,9 @@ coverage
 
 # wrangler
 .wrangler/
+
+# local agent tooling (never published)
+.enggflo/
+.taste-skill/
+.impeccable/
+.rtk/

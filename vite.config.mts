@@ -35,7 +35,7 @@ export default defineConfig({
   },
   test: {
     environment: "happy-dom",
-    include: ["src/**/*.test.ts"],
+    include: ["src/**/*.test.ts", "demo/**/*.test.ts"],
     // WHY: a cached .vue transform skips vite-css-in-js, so its virtual
     // `vite-css-in-js@*.css` modules are never registered and every rerun fails.
     fsModuleCache: false,

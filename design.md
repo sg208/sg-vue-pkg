@@ -8,7 +8,7 @@
 - `src/styles/tokens.css` — `--sg-button-*` custom properties (light, dark, reduced motion), imported by `src/index.ts` so it lands in `dist/style.css`.
 - `demo/` — showcase and docs page, built by `vite.demo.config.mts` into `dist-demo/`; imports components from `src/`.
 - `demo/{accessibility,privacy,terms}.html` — legal pages; extra rollup inputs in `vite.demo.config.mts`; each mounts `LegalApp.vue` via `demo/legal.ts`, keyed by `<body data-page>` (`demo/data/legalPages.ts`). <!-- enggflo -->
-- `demo/components/SiteFooter.vue` — footer links: GitHub repo, npm package, licence, legal pages. <!-- enggflo -->
+- `demo/components/SiteFooter.vue` — footer links: GitHub repo (icon), npm package, licence, legal pages. <!-- enggflo -->
 - `wrangler.jsonc` — Cloudflare Worker `sg-vue-pkg`, static assets from `dist-demo/`, custom domain `sg-vue-pkg.engg.app`; `workers_dev` and `preview_urls` off. <!-- enggflo -->
 
 ## Data flow

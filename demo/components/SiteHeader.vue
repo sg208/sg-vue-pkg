@@ -11,11 +11,6 @@
           <li><a :href="`${homeHref}#components`">Components</a></li>
           <li><a :href="`${homeHref}#tokens`">Tokens</a></li>
           <li><a :href="`${homeHref}#questions`">Questions</a></li>
-          <li>
-            <a href="https://github.com/sg208/sg-vue-pkg" rel="noopener"
-              >GitHub</a
-            >
-          </li>
         </ul>
       </nav>
       <ThemeSwitch />
