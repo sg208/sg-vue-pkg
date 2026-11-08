@@ -20,10 +20,12 @@ describe("SgButtonText", () => {
     expect(wrapper.text()).toContain("Next");
   });
 
-  it("forwards ariaLabel to aria-label", () => {
-    const wrapper = mount(SgButtonText, { props: { ariaLabel: "Open menu" } });
+  it("sets aria-label only when ariaLabel is passed", () => {
+    const unlabelled = mount(SgButtonText);
+    const labelled = mount(SgButtonText, { props: { ariaLabel: "Open menu" } });
 
-    expect(wrapper.attributes("aria-label")).toBe("Open menu");
+    expect(unlabelled.attributes("aria-label")).toBeUndefined();
+    expect(labelled.attributes("aria-label")).toBe("Open menu");
   });
 
   it("exposes a stable class for consumer styling", () => {

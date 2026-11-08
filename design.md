@@ -2,7 +2,7 @@
 
 ## Architecture
 
-- `src/index.ts:1-4` — single entry; named exports `SgButton`, `SgButtonText`.
+- `src/index.ts:1-5` — single entry; named exports `SgButton`, `SgButtonText`.
 - `src/components/SgButton.vue` — `<button>` with default slot and optional `ariaLabel` prop.
 - `src/components/SgButtonText.vue` — `<button>` rendering `text` prop plus default slot; optional `ariaLabel`.
 - `src/styles/tokens.css` — `--sg-button-*` custom properties (light, dark, reduced motion), imported by `src/index.ts` so it lands in `dist/style.css`.

@@ -20,10 +20,8 @@
 
 <script setup lang="ts">
 import ThemeSwitch from "./ThemeSwitch.vue";
-import packageJson from "../../package.json";
+import { version } from "../../package.json";
 
 // Empty on the home page; "./" on other pages so section links go home.
 const { homeHref = "" } = defineProps<{ homeHref?: string }>();
-
-const version = packageJson.version;
 </script>
