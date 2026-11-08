@@ -27,7 +27,7 @@
           <h3 :id="`${doc.id}-title`">{{ doc.name }}</h3>
           <p>{{ doc.summary }}</p>
           <div class="component-doc__examples">
-            <template v-if="doc.name === 'SgButton'">
+            <template v-if="doc.id === 'sg-button'">
               <SgButton>Save changes</SgButton>
               <SgButton aria-label="Add item">
                 <PlusIcon />

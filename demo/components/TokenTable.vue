@@ -7,20 +7,20 @@
       :aria-labelledby="headingId"
       tabindex="0"
     >
-      <table class="token-table">
-        <thead>
-          <tr>
-            <th scope="col">Token</th>
-            <th scope="col">Default</th>
-            <th scope="col">Purpose</th>
+      <table class="token-table" role="table">
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col" role="columnheader">Token</th>
+            <th scope="col" role="columnheader">Default</th>
+            <th scope="col" role="columnheader">Purpose</th>
           </tr>
         </thead>
-        <tbody>
-          <tr v-for="row in rows" :key="row.name">
-            <th scope="row">
+        <tbody role="rowgroup">
+          <tr v-for="row in rows" :key="row.name" role="row">
+            <th scope="row" role="rowheader">
               <code>{{ row.name }}</code>
             </th>
-            <td class="token-table__value">
+            <td role="cell" class="token-table__value">
               <span class="token-value">
                 <span
                   v-if="row.isColour"
@@ -41,7 +41,7 @@
                 <span class="muted">dark</span>
               </span>
             </td>
-            <td>{{ row.purpose }}</td>
+            <td role="cell">{{ row.purpose }}</td>
           </tr>
         </tbody>
       </table>

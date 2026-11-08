@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { mount } from "@vue/test-utils";
 import SiteFooter from "./SiteFooter.vue";
 import SiteHeader from "./SiteHeader.vue";
+import { version } from "../../package.json";
 
 const repoUrl = "https://github.com/sg208/sg-vue-pkg";
 
@@ -9,6 +10,12 @@ const githubChromeLinks = (html: string) =>
   [...new DOMParser().parseFromString(html, "text/html").querySelectorAll("a")]
     .filter((link) => link.href.startsWith("https://github.com/"))
     .filter((link) => !link.href.endsWith("/LICENSE"));
+
+describe("site header version", () => {
+  it("shows the package version", () => {
+    expect(mount(SiteHeader).text()).toContain(`v${version}`);
+  });
+});
 
 describe("site chrome GitHub link", () => {
   it("header has no GitHub link", () => {

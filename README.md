@@ -13,6 +13,7 @@ pnpm add sg208-button
 
 ## Usage
 
+<!-- prettier-ignore -->
 ```vue
 <script setup>
 // import the style once, at the app level
@@ -26,9 +27,7 @@ import { SgButton, SgButtonText } from "sg208-button";
   <SgButton ariaLabel="Close dialog"><CloseIcon aria-hidden="true" /></SgButton>
   <SgButtonText text="Button text with prop" />
   <SgButtonText>This is SgButtonText</SgButtonText>
-  <SgButtonText ariaLabel="Open menu"
-    ><MenuIcon aria-hidden="true"
-  /></SgButtonText>
+  <SgButtonText ariaLabel="Open menu"><MenuIcon aria-hidden="true" /></SgButtonText>
 </template>
 ```
 
