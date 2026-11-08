@@ -1,6 +1,6 @@
 {
   "name": "sg208-button",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Two accessible Vue 3 buttons themed with CSS custom properties",
   "author": "Syailendra Ginting (https://github.com/sg208)",
   "license": "MIT",
