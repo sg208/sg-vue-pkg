@@ -11,7 +11,8 @@
   "homepage": "https://sg-vue-pkg.engg.app",
   "bugs": "https://github.com/sg208/sg-vue-pkg/issues",
   "sideEffects": [
-    "**/*.css"
+    "**/*.css",
+    "./demo/styles/index.ts"
   ],
   "packageManager": "pnpm@10.34.8",
   "keywords": [
